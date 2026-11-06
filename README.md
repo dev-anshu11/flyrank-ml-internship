@@ -4,7 +4,7 @@
 
 A content team can't review 30,000 pages. This notebook ranks pages from 32 clients by impressions lost. It's a rule-based baseline in Python, not a model.
 
-**Notebook:** [work/notebooks/w01_research_question.ipynb](work/notebooks/w01_research_question.ipynb)
+**Notebook:** [w01_research_question.ipynb](https://github.com/dev-anshu11/flyrank-ml-internship/blob/main/work/notebooks/w01_research_question.ipynb)
 
 **What I found.** 1,205 pages had an `avg_position` of 0, which the data dictionary says means no position data. All 1,205 were tagged `top_3`, and the median one had 1 impression in 90 days. I set the zeros to missing and relabeled those pages `unknown`. `top_3` dropped from 2,321 pages to 1,116.
 
