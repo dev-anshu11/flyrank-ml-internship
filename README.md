@@ -1,6 +1,6 @@
-# FlyRank ML Internship — Starter Repo
-
 # Which pages should a content team review first?
+
+*Content refresh ranking for the Fly Rank ML internship (ML-02)*
 
 A content team can't review 30,000 pages. This notebook ranks pages from 32 clients by impressions lost. It's a rule-based baseline in Python, not a model.
 
