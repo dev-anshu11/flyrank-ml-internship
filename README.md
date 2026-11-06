@@ -1,5 +1,19 @@
 # FlyRank ML Internship — Starter Repo
 
+# Which pages should a content team review first?
+
+A content team can't review 30,000 pages. This notebook ranks pages from 32 clients by impressions lost. It's a rule-based baseline in Python, not a model.
+
+**Notebook:** [work/notebooks/w01_research_question.ipynb](work/notebooks/w01_research_question.ipynb)
+
+**What I found.** 1,205 pages had an `avg_position` of 0, which the data dictionary says means no position data. All 1,205 were tagged `top_3`, and the median one had 1 impression in 90 days. I set the zeros to missing and relabeled those pages `unknown`. `top_3` dropped from 2,321 pages to 1,116.
+
+**How I ranked.** I took the pages labeled `down` (impressions fell by more than 20% between the previous 30 days and the last 30 days) with a known position, which is 16,254 of 30,000 pages. I scored them by impressions lost, so a page falling from 5,000 to 3,000 outranks one falling from 10 to 5. I kept each client's top 2 pages with a loss of at least 1,000 impressions, which gives 41 pages from 21 clients. The 1,000 cutoff is my choice, not something the data tells me.
+
+**Limits.** It only describes pages that already fell, so it doesn't predict anything. I didn't use clicks, because 44% of pages had zero clicks in 90 days. No one has reviewed the list.
+
+---
+
 **Applied Search Intelligence: Google Search Ranking & Discoverability**
 
 This is the starting point for the FlyRank ML Internship. You **clone it into your own public
